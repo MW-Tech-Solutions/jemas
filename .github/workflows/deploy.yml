@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/website_cd3bc2d5/jemas/
+          server-dir: ./
           dangerous-clean-slate: false   # Set to true ONLY on first deploy to wipe target first
           exclude: |
             **/.git*

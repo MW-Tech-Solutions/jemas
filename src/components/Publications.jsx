@@ -13,105 +13,105 @@ export default function Publications() {
       sNo: 1,
       title: "Assessment Alignment and Statistical Moderation of the 2021–2023 WASSCE Chemistry Multiple-Choice Examination in Akwa Ibom State, Nigeria",
       authors: "Uko, Idorenyin Akaninyene & Prof. Jeremiah G. Adewale",
-      file: `${BASE}publications/Assessment Alignment and Statistical Moderation of the 2021.pdf`,
+      file: `${BASE}publications/assessment-alignment-statistical-moderation.pdf`,
       pages: "1 – 10"
     },
     {
       sNo: 2,
       title: "Influence of Teachers’ Demographic Characteristics on Technology Integration Readiness in Secondary Schools in Olorunda Local Government Area, Osun State",
       authors: "Adebola Oladiji Alaba. PhD, Abosede Boladale Olukayode & Oseni Olayinka Azeez",
-      file: `${BASE}publications/Influence of Teachers’ Demographic Characteristics on Technology Integration Readiness in Secondary Schools in Olorunda Local Government Area, Osun State.pdf`,
+      file: `${BASE}publications/influence-teachers-demographic-technology-readiness.pdf`,
       pages: "11 - 28"
     },
     {
       sNo: 3,
       title: "Harnessing Signal Intelligence for Effective School Administration: Implications for the Administration of Public Primary Schools in Benue State, Nigeria",
       authors: "OKINO Momoh Hajara",
-      file: `${BASE}publications/HARNESSING SIGNAL INTELLIGENCE FOR EFFECTIVE SCHOOL ADMINISTRATION.pdf`,
+      file: `${BASE}publications/harnessing-signal-intelligence-school-administration.pdf`,
       pages: "29 – 43"
     },
     {
       sNo: 4,
       title: "Teachers’ Perception of Influence of Insecurity on Public Primary School Pupils’ Enrollment in Conflict-Affected Communities of Benue State, Nigeria",
       authors: "Anundu, Samson, Olatunde, Olubunmi Helen, PhD & Kwende, Doosuur, PhD",
-      file: `${BASE}publications/TEACHERS’ PERCEPTION OF INFLUENCE OF INSECURITY ON PUBLIC PRIMARY SCHOOL PUPILS’ ENROLLMENT IN CONFLICT-AFFECTED COMMUNITIES OF BENUE STATE, NIGERIA.pdf`,
+      file: `${BASE}publications/teachers-perception-insecurity-pupils-enrollment.pdf`,
       pages: "44 - 56"
     },
     {
       sNo: 5,
       title: "Teacher’s Participation in Management Decision Making and Job Performance in Public Secondary Schools in Edo North Senatorial District.",
       authors: "DR. MRS. OKOSUN MERCY & DR. IMOROA, OLADELE VICTOR",
-      file: `${BASE}publications/TEACHER’S PARTICIPATION IN MANAGEMENT DECISION MAKING AND JOB PERFORMANCE IN PUBLIC SECONDARY SCHOOLS IN EDO NORTH SENATORIAL DISTRICT.pdf`,
+      file: `${BASE}publications/teachers-participation-decision-making-job-performance.pdf`,
       pages: "57 – 69"
     },
     {
       sNo: 6,
       title: "Redefining University Education in the Age of Artificial Intelligence: Implications for Teaching, Curriculum, and Postgraduate Supervision in Nigeria",
       authors: "IORHEMEN, Benjamin Terzungwe, GEGGE, Michael Ternenge, UKORO, Frank Onyeka, ORKER, Emmanuel Terseer & JOSHUA, Manasseh Afyenaku",
-      file: `${BASE}publications/Redefining University Education in the Age of Artificial Intelligence.pdf`,
+      file: `${BASE}publications/redefining-university-education-artificial-intelligence.pdf`,
       pages: "70 – 80"
     },
     {
       sNo: 7,
       title: "Repositioning Business Education in the Digital Age: Strategies for Curriculum and Skill Development at Tertiary Level",
       authors: "Abayomi Victor FAROTIMI, Jamiu Eniola RAMONI & Waliyulahi Opeyemi ALABI",
-      file: `${BASE}publications/REPOSITIONING BUSINESS EDUCATION IN THE DIGITAL AGE STRATEGIES FOR CURRICULUM AND SKILL DEVELOPMENT AT TERTIARY LEVEL.pdf`,
+      file: `${BASE}publications/repositioning-business-education-digital-age.pdf`,
       pages: "81 – 92"
     },
     {
       sNo: 8,
       title: "Perceived Impact of School Plant Management on Academic Staff Job Performance in Public Universities in South-East, Nigeria",
       authors: "Victor Chika Nwachukwu, Dr. Philomena Ibuh Adzongo & Dr. Esther Akinde",
-      file: `${BASE}publications/Perceived Impact of School Plant Management on Academic Staff Job Performance in Public Universities in South.pdf`,
+      file: `${BASE}publications/perceived-impact-school-plant-management.pdf`,
       pages: "93 – 104"
     },
     {
       sNo: 9,
       title: "Economic Implications of Fuel Subsidy Removal in Nigeria",
       authors: "Dr Okochi Emmanuel Oche, Engr. Oinu Timothy & Mr Ameh Christopher Odumu",
-      file: `${BASE}publications/Economic Implications of Fuel Subsidy Removal in Nigeria.pdf`,
+      file: `${BASE}publications/economic-implications-fuel-subsidy-removal.pdf`,
       pages: "105 - 112"
     },
     {
       sNo: 10,
       title: "Influence of Classroom and Play Facilities Provisions on Pupils’ Academic Performance in Primary Schools in Makurdi Metropolis in Benue State, Nigeria",
       authors: "Dr. Christiana Amichi Agbulu & Amina Muhammed",
-      file: `${BASE}publications/Influence of Classroom and Play Facilities Provisions on Pupils’ Academic Performance in Primary Schools in Makurdi Metropolis in Benue State, Nigeria.pdf`,
+      file: `${BASE}publications/influence-classroom-play-facilities-academic-performance.pdf`,
       pages: "113 – 120"
     },
     {
       sNo: 11,
       title: "Stakeholders’ Involvement in the Management of Secondary Schools: Implications for Teachers’ Effectiveness and Cooperative Governance in Cross River State, Nigeria",
       authors: "Ategwu Patrick Ogar",
-      file: `${BASE}publications/Stakeholders’ Involvement in the Management of Secondary Schools Implications for Teachers’ Effectiveness and Cooperative Governance in Cross River State, Nigeria.pdf`,
+      file: `${BASE}publications/stakeholders-involvement-management-secondary-schools.pdf`,
       pages: "121 – 136"
     },
     {
       sNo: 12,
       title: "Herders-Farmers Conflict, Implications for the Safety of Learners and Members of Staff in Nigerian Schools",
       authors: "Aba Archibong Emmanuel A. Ph.D A’EMAPP, NAEAP",
-      file: `${BASE}publications/HERDERS-FARMERS CONFLICT, IMPLICATIONS FOR THE SAFETY OF LEARNERS AND MEMBERS OF STAFF IN NIGERIAN SCHOOLS.pdf`,
+      file: `${BASE}publications/herders-farmers-conflict-safety-learners-staff.pdf`,
       pages: "137 – 147"
     },
     {
       sNo: 13,
       title: "Functional Education for Value Re-Orientation and National Development in Nigeria",
       authors: "Dr Okochi Emmanuel Oche",
-      file: `${BASE}publications/FUNCTIONAL EDUCATION FOR VALUE RE-ORIENTATION AND NATIONAL DEVELOPMENT IN NIGERIA.pdf`,
+      file: `${BASE}publications/functional-education-value-reorientation-national-development.pdf`,
       pages: "148 – 156"
     },
     {
       sNo: 14,
       title: "Influence of Leading Functions of Principals on Teachers’ Job Performance in Senior Secondary Schools of North West Geo-Political Zone, Nigeria",
       authors: "Zainab Musa Iliasu & Dr. Zainab Sani K/Mata",
-      file: `${BASE}publications/PRINCIPALS’ LEADING FUNCTIONS AND TEACHERS’ JOB PERFORMANCE IN SENIOR SECONDARY SCHOOLS OF NORTH WEST GEO-POLITICAL ZONE, NIGERIA.pdf`,
+      file: `${BASE}publications/principals-leading-functions-teachers-job-performance.pdf`,
       pages: "157 – 165"
     },
     {
       sNo: 15,
       title: "Relationship Between Students’ Engagement in Religious Activities and Academic Achievement in Esan West Local Government Area of Edo State, Nigeria",
       authors: "Mercy OKOSUN, Ph.D., ASEMHE, S. A. & OJIEMHENKELE, Andrew. E., Ph.D.",
-      file: `${BASE}publications/RELATIONSHIP BETWEEN STUDENTS’ ENGAGEMENT IN RELIGIOUS ACTIVITIES AND ACADEMIC ACHIEVEMENT IN ESAN WEST LOCAL GOVERNMENT AREA OF EDO STATE, NIGERIA.pdf`,
+      file: `${BASE}publications/relationship-students-engagement-religious-activities.pdf`,
       pages: "166 - 178"
     }
   ];
