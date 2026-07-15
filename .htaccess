@@ -1,0 +1,56 @@
+# ============================================================
+# JEMAS .htaccess
+# Place this file inside your /jemas/ folder on the server
+# (same folder as index.html — i.e., inside the dist/ output)
+# ============================================================
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase /jemas/
+
+# -------------------------------------------------------
+# 1. SERVE PDF AND STATIC FILES DIRECTLY — MUST COME FIRST
+#    This ensures PDFs are never caught by the SPA rewrite
+# -------------------------------------------------------
+
+# Pass through any existing file (PDFs, images, JS, CSS, etc.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Pass through any existing directory
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# -------------------------------------------------------
+# 2. SPA FALLBACK — only for routes that don't match files
+# -------------------------------------------------------
+RewriteRule ^ index.html [L]
+
+# -------------------------------------------------------
+# 3. MIME TYPE: ensure PDFs are served as application/pdf
+# -------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/pdf .pdf
+</IfModule>
+
+# -------------------------------------------------------
+# 4. PDF headers: inline display for View, downloadable
+#    for the fetch-blob download (handled in JS)
+# -------------------------------------------------------
+<FilesMatch "\.pdf$">
+  Header set Content-Type "application/pdf"
+  Header set Content-Disposition "inline"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# -------------------------------------------------------
+# 5. Performance caching
+# -------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/pdf          "access plus 7 days"
+  ExpiresByType image/png                "access plus 30 days"
+  ExpiresByType text/css                 "access plus 7 days"
+  ExpiresByType application/javascript   "access plus 7 days"
+</IfModule>
