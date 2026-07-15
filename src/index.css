@@ -1449,12 +1449,7 @@ h1, h2, h3, h4, h5, h6 {
   /* ── Prevent ANY horizontal scroll ── */
   .app-layout,
   .header,
-  section,
-  .container,
-  .footer,
-  .pub-container,
-  .table-card,
-  .table-wrapper {
+  .footer {
     max-width: 100vw;
     overflow-x: hidden;
   }

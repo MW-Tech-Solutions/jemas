@@ -122,42 +122,6 @@ export default function Publications() {
     article.authors.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const [downloading, setDownloading] = React.useState(null);
-
-  const handleView = (filePath) => {
-    window.open(filePath, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleDownload = async (filePath, title) => {
-    setDownloading(filePath);
-    try {
-      const response = await fetch(filePath);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const contentType = response.headers.get('content-type') || '';
-      // If server returned HTML instead of PDF (SPA catch), warn user
-      if (contentType.includes('text/html')) {
-        alert('Could not reach the PDF file. Please contact the administrator.');
-        setDownloading(null);
-        return;
-      }
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = title + '.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
-    } catch (err) {
-      console.error('Download error:', err);
-      // Fallback: open in new tab
-      window.open(filePath, '_blank', 'noopener,noreferrer');
-    } finally {
-      setDownloading(null);
-    }
-  };
-
   return (
     <div className="pub-container">
       <div className="container">
@@ -221,22 +185,23 @@ export default function Publications() {
                       </td>
                       <td className="col-actions">
                         <div className="actions-container">
-                          <button 
-                            onClick={() => handleView(article.file)} 
+                          <a 
+                            href={article.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn-sm btn-sm-view"
                             title="View PDF online"
                           >
                             <Eye size={15} /> View
-                          </button>
-                          <button
-                            onClick={() => handleDownload(article.file, article.title)}
+                          </a>
+                          <a
+                            href={article.file}
+                            download={article.title + '.pdf'}
                             className="btn-sm btn-sm-download"
                             title="Download PDF to device"
-                            disabled={downloading === article.file}
                           >
-                            <Download size={15} />
-                            {downloading === article.file ? 'Saving...' : 'Download'}
-                          </button>
+                            <Download size={15} /> Download
+                          </a>
                         </div>
                       </td>
                     </tr>
