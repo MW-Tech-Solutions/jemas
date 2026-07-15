@@ -1,0 +1,58 @@
+name: Build & Deploy JEMAS to Server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  build-and-deploy:
+    name: Build React App & Deploy via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Install dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # 4. Build the production bundle
+      - name: Build Application
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      # 5. Copy .htaccess into dist before deployment
+      - name: Copy .htaccess to dist
+        run: cp .htaccess dist/.htaccess
+
+      # 6. Deploy dist/ folder to server via FTP
+      - name: Deploy to Server via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/website_cd3bc2d5/jemas/
+          dangerous-clean-slate: false   # Set to true ONLY on first deploy to wipe target first
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+
+      # 7. Report deployment success
+      - name: Deployment Complete
+        run: |
+          echo "✅ JEMAS deployed successfully to https://jostumservices.com/jemas/"
